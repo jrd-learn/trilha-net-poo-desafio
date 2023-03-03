@@ -1,4 +1,6 @@
 using System;
+using System.Text;
+
 namespace DesafioPOO.Models
 {
     public abstract class Smartphone
@@ -31,5 +33,18 @@ namespace DesafioPOO.Models
         }
 
         public abstract void InstalarAplicativo(string nomeApp);
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"Numero = {Numero}");
+            sb.AppendLine($"Modelo = {Modelo}");
+            sb.AppendLine($"Imei = {Imei}");
+            sb.AppendLine($"Memoria = {Memoria}GB");
+            sb.AppendLine($"");
+
+            return sb.ToString();
+        }
     }
 }
